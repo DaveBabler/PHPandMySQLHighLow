@@ -2,9 +2,9 @@
 session_start();
  
 $hostname = "mysql.yaacotu.com";
-$username = "tmajchrzak";
-$password = "9*qxNDrK";
-$dbname = "site20db";
+$username = "studCollab";
+$password = "collabor8";
+$dbname = "siteGHdb";
 
 // Create connection
 $conn = mysqli_connect($hostname, $username, $password, $dbname);
