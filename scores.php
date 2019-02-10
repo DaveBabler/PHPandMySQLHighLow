@@ -26,7 +26,9 @@ include_once("config.php");
                 <center><a href="getScores.php"><button class="w3-btn w3-2017-shaded-spruce w3-round-large">Display Scores</button></a><br><br></center>
     
                 <center><a href="highScore.php"><button class="w3-btn w3-2017-shaded-spruce w3-round-large">High Score?</button></a><br><br></center>
-                
+
+                <center><a href="mode.php"><button class="w3-btn w3-2017-shaded-spruce w3-round-large">Mode?</button></a><br><br></center>
+
             </div>
             
             <div class="w3-container w3-2017-shaded-spruce">
@@ -43,6 +45,15 @@ include_once("config.php");
                 if (isset($_SESSION ['hs'])) {
                     echo "<h3>Highest score is " . $_SESSION ['hs'] . ".</h3>";
                 }
+                if (isset($_SESSION['sqlmode'])){
+                    $sqlmodeout = "<p>The mathematical mode found by the SQL Query is: ".$_SESSION['sqlmode']."<br></p>";
+                    echo $sqlmodeout;
+                }
+                if (isset($_SESSION['phpmode'])){
+                    $phpmodeout = "<p>The mathematical mode found by the PHP functions is: ".$_SESSION['phpmode']."<br></p>";
+                    echo $phpmodeout;
+                }
+
                 ?>
             </div>
         </div>
